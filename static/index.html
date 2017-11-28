@@ -32,14 +32,7 @@
     }
 
     function gotUserMedia(stream) {
-
-      if (window.URL) {
-        // Chrome浏览器: URL.createObjectURL() 把 MediaStream 转为 blob URL  
-        myVideo.srcObject = stream
-      } else {
-        // Firefox和Opera: 可以直接把视频源设置为stream  
-        myVideo.src = stream
-      }
+      myVideo.srcObject = stream
     }
 
     function didntGetUserMedia() {
